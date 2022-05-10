@@ -1,14 +1,14 @@
-let innInput = document.querySelector('#innInput'),
-    innBtn = document.querySelector('#innBtn'),
+let innBtn = document.querySelector('#innBtn'),
     innResult = document.querySelector('#innResult')
 let child = document.getElementsByClassName('child');
 let move = document.getElementsByClassName('move')
-let reset = document.getElementById('reset')
+let reset = document.getElementsByClassName('reset')
+let inputs = document.querySelectorAll('.ud')
 
-const innRegExp = /^(0|1|2|3)\d{13}$/
+const innRegExp = /^(1|2)\d{13}$/
 
 innBtn.addEventListener('click', () => {
-    // e.preventDefault()
+    let innInput = document.querySelector('#innInput')
     if(innRegExp.test(innInput.value)){
         innResult.innerText = 'Success';
         innResult.style.color = 'green'
@@ -27,6 +27,15 @@ function right(){
 
 }
 move[0].addEventListener('click', right)
-reset.addEventListener('click', ()=>{
+reset[0].addEventListener('click', ()=>{
     child[0].style.left = '0'
 })
+for (item of inputs){
+    item.addEventListener('mousedown', (e)=>{
+        e.currentTarget.classList.add('mousedown')
+    })
+}for (item of inputs){
+    item.addEventListener('mouseup', (e)=>{
+        e.currentTarget.classList.remove('mousedown')
+    })
+}
