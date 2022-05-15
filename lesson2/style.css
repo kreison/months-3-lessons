@@ -1,0 +1,19 @@
+.wrapper{
+    display: flex;
+    justify-content: center;
+}
+.parent{
+    position: relative;
+    width: 50vw;
+    height: 500px;
+    top: 500px;
+
+}
+.child{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: #454545;
+    position: absolute;
+    left: 20px;
+}
