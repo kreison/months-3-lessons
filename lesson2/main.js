@@ -29,23 +29,22 @@ const move = ()=>{
         }, 2)
     }
 
-    else if (topPosition >= 350 && position >= 350 && positionLeft >= -350){
+    else if (topPosition >= 350 && position >= 350 && positionLeft >= -10){
         positionLeft--
         block.style.left = `${positionLeft}px`
             setTimeout(()=>{
             move()
         }, 2)
     }
-    else if (topPosition >= 350 && position >= 350 && positionLeft <= -350 && bottomPosition >= -350){
+    else if (topPosition >= 350 && position >= 350 && positionLeft <= -10 && bottomPosition >= -10){
         bottomPosition--;
         position = 352
-        console.log(bottomPosition);
         block.style.top = `${bottomPosition}px`
         setTimeout(()=>{
             move();
         }, 2)
     }
-    if(bottomPosition <= - 350){
+    if(bottomPosition <= -10){
         position = 0;
         topPosition = 0;
         positionLeft = 350;

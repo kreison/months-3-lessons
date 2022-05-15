@@ -1,12 +1,7 @@
-.wrapper{
-    display: flex;
-    justify-content: center;
-}
+
 .parent{
     position: relative;
-    width: 50vw;
-    height: 500px;
-    top: 500px;
+    background: yellow;
 
 }
 .child{
@@ -15,5 +10,4 @@
     border-radius: 50%;
     background: #454545;
     position: absolute;
-    left: 20px;
 }
