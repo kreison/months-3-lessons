@@ -36,7 +36,7 @@ const move = ()=>{
             move()
         }, 2)
     }
-    else if (topPosition >= 350 && position >= 350 && positionLeft <= -10 && bottomPosition >= -10){
+    else if (topPosition >= 350 && position >= 350 && positionLeft <= -10 && bottomPosition >= -0){
         bottomPosition--;
         position = 352
         block.style.top = `${bottomPosition}px`
@@ -44,7 +44,7 @@ const move = ()=>{
             move();
         }, 2)
     }
-    if(bottomPosition <= -10){
+    if(bottomPosition <= -0){
         position = 0;
         topPosition = 0;
         positionLeft = 350;
